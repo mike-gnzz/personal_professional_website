@@ -1,15 +1,19 @@
 <!-- pages/templates/pages/home.html -->
 
+{% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" type = "text/css" href= "{%static 'pages/css/styles.css' %}">
 </head>
 <body>
     <h1>Welcome to the Home Page</h1>
-    <a href="{% url 'resume' %}">Professional Resume</a>
-    <a href="{% url 'project_index' %}">Projects</a>
+    <a href="{% url 'resume' %}" class="btn">Professional Resume</a>
+    <a href="{% url 'projects_index' %}"class="btn">Projects</a>
 </body>
 </html>
 
