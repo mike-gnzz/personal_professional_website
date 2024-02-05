@@ -7,13 +7,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Michael Gonzalez</title>
     <link rel="stylesheet" type = "text/css" href= "{%static 'pages/css/styles.css' %}">
 </head>
 <body>
-    <h1>Welcome to the Home Page</h1>
-    <a href="{% url 'resume' %}" class="btn">Professional Resume</a>
-    <a href="{% url 'projects' %}"class="btn">Projects</a>
+
+    <header>
+        <h1>Michael Gonzalez </h1>
+        <nav>
+            <a href="{% url 'home' %}" class="btn">Home</a>
+            <a href="{% url 'about_me' %}" class="btn">About</a>
+            <a href="{% url 'projects' %}"class="btn">Projects</a>
+            <a href="{% url 'contact' %}" class="btn">Contact</a>
+            <a href="{% url 'resume' %}" class="btn">Professional Resume</a>
+        </nav>
+    </header>
+    
 </body>
 </html>
 

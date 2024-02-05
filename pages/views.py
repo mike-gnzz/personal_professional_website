@@ -9,4 +9,4 @@ def other_page(request):
     return render(request, "pages/other_page.html",{})
 
 def projects_page(request):
-    return render (request, "projects/project_index.html",{})
+    return render (request, "projects/projects_index.html",{})

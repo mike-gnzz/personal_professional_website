@@ -1,7 +1,11 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('../images/background_1.jpg');
+    background-image: url('pages/static/images/background_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -15,7 +19,7 @@ h1{
     display: block;
     margin: 10px 0;
     padding: 10px;
-    background-color: #3498db;
+    background-color: #f8eded;
     color:#fff;
     text-decoration: none;
     border-radius: 5px;
@@ -23,5 +27,5 @@ h1{
 }
 
 .btn.hover{
-    background-color: #2980b9;
+    background-color: #f8eded;
 }
