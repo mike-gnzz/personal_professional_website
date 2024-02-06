@@ -1,11 +1,47 @@
-<!-- pages/templates/pages/home.html -->
 {% extends 'base.html' %}
 
 {% block content %}
-    <section>
-        <h1>Home Section</h1>
-        <!-- Add content for the Home section -->
-    </section>
-{% endblock %}
+<div id='home' class="section">
+    <!-- home content here -->
+    <h1>Hello there!</h1>
+</div>
 
-    
+<div id="about" class="section">
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="about-me">
+                    <h2 class="card-title">About Me</h2>
+                    <p>
+                        <span class="title-s">Name:</span>
+                        <span>Michael Gonzalez</span>
+                    </p>
+                    <p>
+                        <span class="title-s">Email:</span>
+                        <span>gnzz.michael@gmail.com</span>
+                    <p>
+                        <span class="title-s">Education:</span>
+                        <span>Bachelor of Arts in Political Science from UC Irvine</span>
+                    </p>
+                    <p class="card-text">
+                        Hello there! My name is Michael Gonzalez and I am a developer that loves
+                         to explore my creativity and hobbies through tech.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="projects" class="section">
+    <!-- Projects content here -->
+    <h2>Projects</h2>
+    <p>Check out our latest projects.</p>
+</div>
+
+<div id="contact" class="section">
+    <!-- Contact content here -->
+    <h2>Contact</h2>
+    <p>Reach out to us!</p>
+</div>
+{% endblock %}
