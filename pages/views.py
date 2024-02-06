@@ -5,8 +5,11 @@ from django.shortcuts import render
 def home(request):
     return render(request, "pages/home.html",{})
 
-def other_page(request):
-    return render(request, "pages/other_page.html",{})
+def about(request):
+    return render(request, "pages/about.html",{})
 
 def projects_page(request):
     return render (request, "projects/projects_index.html",{})
+
+def contact(request):
+    return render(request, 'contact.html')
