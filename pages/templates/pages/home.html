@@ -3,7 +3,7 @@
 {% block content %}
 <div id='home' class="section">
     <!-- home content here -->
-    <h1>Hello there!</h1>
+    <h3>Hello there!</h3>
 </div>
 
 <div id="about" class="section">
@@ -11,7 +11,7 @@
         <div class="col-md-12">
             <div class="container">
                 <div class="about-me">
-                    <h2 class="card-title">About Me</h2>
+                    <h3 class="card-title">About Me</h3>
                     <p>
                         <span class="title-s">Name:</span>
                         <span>Michael Gonzalez</span>
@@ -35,24 +35,60 @@
 
 <div id="projects" class="section">
     <!-- Projects content here -->
-    <h2>Projects</h2>
-    <div class="row">
-        {% for project in projects %}
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">{{ project.title }}</h5>
-                    <p class="card-text">{{ project.description }}</p>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div id='container'>
+                <h3>Projects</h3>
+                <div class="row">
+                    {% for project in projects %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="{{ project.image.url }}" class="card-img-top" alt="{{project.title}}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
 </div>
 
 <div id="contact" class="section">
     <!-- Contact content here -->
-    <h2>Contact</h2>
-    <p>Reach out to us!</p>
+    <div class="container">
+        <div class="row">
+            <div class="contact-mf">
+                <div id="contact" class="box-shadow-full">
+                    <div id="title-box-2 pt-5 pt-md-0">
+                        <h3 class="title-left">Contact Me</h3>
+                    </div>
+                    <div id='more-info'>
+                        <p class='lead'>Please feel free to contact me below</p>
+                        <p>Email: {{email}}</p>
+                        <p>Location: {{location}}</p>
+                    </div>
+                    <div class="socials">
+                        <ul>
+                            <li>
+                                <a href=https://www.linkedin.com/in/michael-gonzalez-69935a178/>
+                                    <span class="icon-circle">
+                                        <i class="ion-social-linkedin">
+                                            ::before
+                                        </i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
 </div>
 {% endblock %}

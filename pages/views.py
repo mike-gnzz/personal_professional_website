@@ -4,8 +4,12 @@ from projects.models import Project
 # Create your views here.
 
 def home(request):
+    email = "gnzz.michael@gmail.com"
+    location = "California"
     projects = Project.objects.all()
-    return render(request, "pages/home.html",{'projects':projects})
+    return render(request, "pages/home.html",{'projects':projects,
+                                              'email':email,
+                                              'location': location})
 
 def about(request):
     return render(request, "pages/about.html",{})
