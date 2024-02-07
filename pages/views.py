@@ -6,6 +6,7 @@ from projects.models import Project
 def home(request):
     email = "gnzz.michael@gmail.com"
     location = "California"
+    LinkedIn_url = 'https://www.linkedin.com/in/michael-gonzalez-69935a178/'
     projects = Project.objects.all()
     return render(request, "pages/home.html",{'projects':projects,
                                               'email':email,

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <div id='home' class="section">
@@ -73,15 +74,10 @@
                     </div>
                     <div class="socials">
                         <ul>
-                            <li>
-                                <a href=https://www.linkedin.com/in/michael-gonzalez-69935a178/>
-                                    <span class="icon-circle">
-                                        <i class="ion-social-linkedin">
-                                            ::before
-                                        </i>
-                                    </span>
-                                </a>
-                            </li>
+                            <p>
+                                <a href={{ LinkedIn_url }} target="_blank"><img src="{% static '/pages/images/linked_in.jpg' %}" 
+                                alt="LinkedIn Profile" class="linkedin-logo"></a>
+                            </p>
                         </ul>
 
                 </div>
