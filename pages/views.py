@@ -13,11 +13,3 @@ def home(request):
                                               'email':email,
                                               'location': location})
 
-def about(request):
-    return render(request, "pages/about.html",{})
-
-def project_page(request):
-    return render (request, "projects/project_detail.html",{})
-
-def contact(request):
-    return render(request, 'contact.html')
