@@ -120,10 +120,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIR = [
-    'pages/static/'
-]
+# STATICFILES_DIR = BASE_DIR / 'staticfiles'
 
+#Set the directory where collectstatic will copy static files
+
+STATIC_ROOT=str(BASE_DIR / 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
