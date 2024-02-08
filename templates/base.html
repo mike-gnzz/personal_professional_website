@@ -1,3 +1,5 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,7 @@
     <title>{% block title %}Michael Gonzalez{% endblock %}</title>
     <!-- Include bootstrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel= "stylesheet" href="{% static 'pages/css/styles.css' %}}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
