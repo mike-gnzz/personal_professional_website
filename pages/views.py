@@ -16,8 +16,8 @@ def home(request):
 def about(request):
     return render(request, "pages/about.html",{})
 
-def projects_page(request):
-    return render (request, "projects/projects_index.html",{})
+def project_page(request):
+    return render (request, "projects/project_detail.html",{})
 
 def contact(request):
     return render(request, 'contact.html')
