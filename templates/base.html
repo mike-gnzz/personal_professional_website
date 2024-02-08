@@ -19,16 +19,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href='#home'>Home</a>
+                        <a class="nav-link" href='/home/'>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href= '#about'>About</a>
+                        <a class="nav-link" href= '/home/#about'>About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="/home/#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="/home/#contact">Contact</a>
                     </li>
             </ul>
         </div>
@@ -37,22 +37,26 @@
         {% block content %}{% endblock %}
     </div>
     <!-- Include Bootstrap JS and Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function() {
             // Smooth scrolling for navbar links
-            $('a.nav-link').click(function() {
-              var target = $(this.hash);
-              if (target.length) {
-                $('html, body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
+            $('a.nav-link').click(function(event) {
+                var target = $(this.hash);
+                if (target.length) {
+                    event.preventDefault(); // Prevent default link behavior
+
+                    // Redirect to the home page with hash fragment
+                    var homeURL = '/home/'
+                    window.location.href = homeURL + $(this).attr('href')
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 300);
+                }
             });
-          });
+        });
     </script>
 </body>
 </html>
