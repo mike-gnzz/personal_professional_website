@@ -47,13 +47,18 @@
                 var target = $(this.hash);
                 if (target.length) {
                     event.preventDefault(); // Prevent default link behavior
-
-                    // Redirect to the home page with hash fragment
-                    var homeURL = '/home/'
-                    window.location.href = homeURL + $(this).attr('href')
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 300);
+        
+                    // Check if the current page is the home page
+                    var currentPage = window.location.pathname;
+                    if (currentPage !== '/home/') {
+                        // Redirect to the home page with hash fragment
+                        window.location.href = '/#' + target.attr('id');
+                    } else {
+                        // Smooth scrolling to the target section
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 100); // Adjust the duration as needed
+                    }
                 }
             });
         });
