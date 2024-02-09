@@ -4,13 +4,15 @@
 {% block content %}
 <div id='home' class="section pt-5 pb-5">
     <!-- home content here -->
-    <h3>Hello there!</h3>
+    <div class='container'>
+        <h3>Hello there!</h3>
+    </div>
 </div>
 
 <div id="about" class="section pt-5 pb-5">
-    <div class="row mt-4">
-        <div class="col-md-12">
-            <div class="container">
+    <div class='container'>
+        <div class="row mt-4">
+            <div class="col-md-8">
                 <div class="about-me">
                     <h3 class="card-title">About Me</h3>
                     <p>
@@ -26,7 +28,7 @@
                     </p>
                     <p class="card-text">
                         Hello there! My name is Michael Gonzalez and I am a developer that loves
-                         to explore my creativity and hobbies through tech.
+                        to explore my creativity and hobbies through tech.
                     </p>
                 </div>
             </div>
@@ -35,28 +37,30 @@
 </div>
 
 <div id="projects" class="section pb-5 pt-5">
-    <!-- Projects content here -->
-    <div class="row mt-4">
-        <div class="col-md-12">
-            <div id='container'>
-                <h3>Projects</h3>
-                <div class="row">
-                    {% for project in projects %}
-                    <div class="card mb-3 d-flex align-items-stretch">
-                        <a href = "{% url 'project_detail' pk=project.id %}" class="card-link text-decoration-none">
-                            <div class= "row g-0">
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ project.title }}</h5>
-                                        <p class="card-text">{{ project.description }}</p>
+    <div class="container">
+        <!-- Projects content here -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class= "projects">
+                    <h3 class = "card-title">Projects</h3>
+                    <div class="row">
+                        {% for project in projects %}
+                        <div class="card mb-3 d-flex align-items-stretch">
+                            <a href = "{% url 'project_detail' pk=project.id %}" class="card-link text-decoration-none">
+                                <div class= "row g-0">
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ project.title }}</h5>
+                                            <p class="card-text">{{ project.description }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{project.title}}">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <img src="{{ project.image.url }}" class="card-img-top" alt="{{project.title}}">
-                                </div>
-                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -81,8 +85,11 @@
                         <ul>
                             <p>
                                 <a href={{ LinkedIn_url }} target="_blank"><img src="{% static '/pages/images/linked_in.jpg' %}" 
-                                alt="LinkedIn Profile" class="linkedin-logo"></a>
+                                    alt="LinkedIn Profile" width = "30" height= "30"></a>
                             </p>
+                            <p>
+                                <a href={{ resume_url }} target="_blank"><img src="{% static 'pages/images/CV.jpg' %}"
+                                    alt='Resume' width = '30' height='30'></a>
                         </ul>
 
                 </div>
