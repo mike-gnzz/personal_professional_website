@@ -11,5 +11,7 @@ def home(request):
     projects = Project.objects.all()
     return render(request, "pages/home.html",{'projects':projects,
                                               'email':email,
-                                              'location': location})
+                                              'location': location,
+                                              "LinkedIn_url": LinkedIn_url,
+                                              'resume_url': resume_url})
 
