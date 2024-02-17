@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',
                  'www.michaelgnzz.me',
-                 'michaelgnzz.me']
+                 'michaelgnzz.me',
+                 ]
 
 
 # Application definition
