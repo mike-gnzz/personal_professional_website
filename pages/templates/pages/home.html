@@ -25,7 +25,9 @@
                         </div>
                         <div class = "col-md-2">
                             <div class = "link-item">
-                                <a href={{email}} target=" _blank">Email</a>
+                                <a href="mailto:{{email}}?subject=Hello%20there
+                                &body=Hi,%20I%20found%20your%20website%20and%20wanted%20to%20reach%20out%20to%20you." target= '_blank'>Email</a>
+
                             </div>
                         </div>
                         <div class = "col-md-2">
@@ -44,7 +46,7 @@
     <div class="container">
         <!-- Projects content here -->
         <h3 class = "card-title">Projects</h3>
-        <div class="row">
+        <div class="row pt-4 pb-4">
             {% for project in projects %}
             <div class="col-md-4">
                 <div class = "card mb-3">
@@ -65,12 +67,13 @@
     <div class="container">
          <!-- Contribution content here -->
          <h3 class = "card-title">Contributions</h3>
-         <div class="row">
+         <h5 class= "pt-3 pb-3"> collection of various contributions I have made across my academic and professional career</h5>
+         <div class="row pt-3 pb-3">
              {% for contribution in contributions %}
              <div class="col-md-4">
                  <div class = "card mb-3">
                      <a href = "{% url 'contribution_detail' pk=contribution.id %}" class="card-link text-decoration-none">
-                         <img src="{{ contribution.Main_image.url }}" class="card-img-top" alt="{{contribution.title}}">
+                         <img src="{{ contributions.image.url }}" class="card-img-top" alt="">
                          <div class = "card-body">
                              <h5 class = "card-title">{{contribution.title}}</h5>
                          </div>
