@@ -4,14 +4,14 @@
 {% block content %}
 <div id='home' class="section pt-5 pb-5">
     <!-- home content here -->
-    <div class='container'>
+    <div class='container' style="padding-top: 70px;">
         <h3>Michael Gonzalez</h3>
         <h5>Front-end and back-end developer</h5>
     </div>
 </div>
 
 <div id="about" class="section pt-5 pb-5">
-    <div class='container'>
+    <div class='container' >
         <div class="row mt-4">
             <div class="col-md-8">
                 <div class="about-me">
@@ -25,12 +25,12 @@
                         </div>
                         <div class = "col-md-2">
                             <div class = "link-item">
-                                <a href={{email}}>Email</a>
+                                <a href={{email}} target=" _blank">Email</a>
                             </div>
                         </div>
                         <div class = "col-md-2">
                             <div class = "link-item">
-                                <a href = {{LinkedIn_url}}>Linked in</a>
+                                <a href = {{LinkedIn_url}} target =" _blank">Linked in</a>
                             </div>
                         </div>
                     </div>
@@ -43,36 +43,25 @@
 <div id="projects" class="section pb-5 pt-5">
     <div class="container">
         <!-- Projects content here -->
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <div class= "projects">
-                    <h3 class = "card-title">Projects</h3>
-                    <div class="row">
-                        {% for project in projects %}
-                        <div class="card mb-3 d-flex align-items-stretch">
-                            <a href = "{% url 'project_detail' pk=project.id %}" class="card-link text-decoration-none">
-                                <div class= "row g-0">
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{ project.title }}</h5>
-                                            <p class="card-text">{{ project.description }}</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{project.title}}">
-                                    </div>
-                                </div>
-                            </a>
+        <h3 class = "card-title">Projects</h3>
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-md-4">
+                <div class = "card mb-3">
+                    <a href = "{% url 'project_detail' pk=project.id %}" class="card-link text-decoration-none">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{project.title}}">
+                        <div class = "card-body">
+                            <h5 class = "card-title">{{project.title}}</h5>
                         </div>
-                        {% endfor %}
-                    </div>
+                    </a>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>
 
-<div id="contact" class="section pt-5 pb-5">
+<div id="contributions41" class="section pt-5 pb-5">
     <!-- Contact content here -->
     <div class="container">
         <div class="row">
