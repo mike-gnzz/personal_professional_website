@@ -9,8 +9,10 @@
                 <h5>About the contribution:</h5>
                 <p>{{ contributions.description }}</p>
                 <br>
-                <h5>contribution link:</h5>
-                <a class ='link' href = {{ contributions.link}} target = '_blank' class = "btn btn-primary">Find it here</a>
+                {% if contributions.link %}
+                    <h5>contribution link:</h5>
+                    <a class ='link' href = {{ contributions.link}} target = '_blank' class = "btn btn-primary">Find it here</a>
+                    {% endif %}
             </div>
             <div class="col-md-4">
                 {% if contributions.image %}
