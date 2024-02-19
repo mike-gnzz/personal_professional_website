@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['localhost',
 # Application definition
 
 INSTALLED_APPS = [
+    'contributions.apps.ContributionsConfig',
     'pages.apps.PagesConfig',
     'projects.apps.ProjectsConfig',
     'django.contrib.admin',
