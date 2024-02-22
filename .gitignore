@@ -3,3 +3,4 @@ venv
 __pycache__/
 __pycache__
 projects/__pycache__/
+db.splite3
