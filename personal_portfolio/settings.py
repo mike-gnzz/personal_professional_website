@@ -23,11 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+z)0d4zr8^a-b+dv_&9u@cj5oeb0*wi!h7d%mh@hugddb2#i2a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',
                  'www.michaelgnzz.me',
-                 'michaelgnzz.me',
+                 'michaelgnzz.me',           
                  ]
 
 
@@ -124,16 +124,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_DIR = BASE_DIR / 'staticfiles'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'pages' / 'static',
+    ]
 
 #Set the directory where collectstatic will copy static files
 
-STATIC_ROOT=str(BASE_DIR / 'staticfiles')
+STATIC_ROOT= str(BASE_DIR / 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = BASE_DIR / "uploads/"
-MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "uploads"
+MEDIA_URL = "/media/"
